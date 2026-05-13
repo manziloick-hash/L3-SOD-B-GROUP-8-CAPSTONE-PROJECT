@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Pâtisserie Royale</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <img src="assets/images/logo/logo.png" alt="Pâtisserie Royale" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <span class="brand-name">Pâtisserie Royale</span>
+        <span class="brand-sub">Kimihurura · Kigali</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count" id="cartCount">0</span></button>
+      <a href="contact.html" class="nav-cta">Reserve a table</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero short">
+    <div class="page-hero-overlay">
+      <p class="section-label">Get in touch</p>
+      <h1>Contact Us</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info fade-up">
+        <p class="section-label">Visit & Call</p>
+        <h2>We'd love to<br>hear from you</h2>
+        <div class="divider"></div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Address</strong><p>KG 7 Avenue, Kimihurura<br>Kigali, Rwanda</p></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div><strong>Opening Hours</strong>
+            <p>Mon–Fri: 7:00 AM – 9:00 PM<br>Sat: 7:30 AM – 10:00 PM<br>Sun: 8:00 AM – 8:00 PM</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 12 19.79 19.79 0 012 2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006 6z"/></svg>
+          <div><strong>Phone</strong><p>+250 780 000 000</p></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div><strong>Email</strong><p>hello@patisserieroyale.rw</p></div>
+        </div>
+
+        <!-- MAP EMBED PLACEHOLDER -->
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5028!2d30.0787!3d-1.9538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKimihurura!5e0!3m2!1sen!2srw!4v1"
+            width="100%" height="220" style="border:0;border-radius:10px" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-wrap fade-up">
+        <p class="section-label">Send a message</p>
+        <h2>Reserve a table or<br>order a custom cake</h2>
+        <div class="divider"></div>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Amina" required>
+              <span class="form-error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Uwera" required>
+              <span class="form-error" id="lastNameError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="amina@email.com" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+250 780 000 000">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a subject</option>
+              <option value="reservation">Table reservation</option>
+              <option value="custom-cake">Custom cake order</option>
+              <option value="catering">Catering & events</option>
+              <option value="general">General enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your order or reservation..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
+          <div class="form-success" id="formSuccess" style="display:none">
+            ✅ Thank you! We'll be in touch within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand"><p class="footer-name">Pâtisserie Royale</p><p class="footer-sub">Bakery & Café · Kimihurura, Kigali</p></div>
+      <div><p class="footer-col-title">Pages</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="products.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer-col-title">Contact</p><ul class="footer-links"><li>KG 7 Ave, Kimihurura, Kigali</li><li>+250 780 000 000</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Pâtisserie Royale · All rights reserved</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

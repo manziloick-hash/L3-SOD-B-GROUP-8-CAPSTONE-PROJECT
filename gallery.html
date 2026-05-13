@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Pâtisserie Royale</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <img src="assets/images/logo/logo.png" alt="Pâtisserie Royale" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <span class="brand-name">Pâtisserie Royale</span>
+        <span class="brand-sub">Kimihurura · Kigali</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Menu</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count" id="cartCount">0</span></button>
+      <a href="contact.html" class="nav-cta">Reserve a table</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero short">
+    <div class="page-hero-overlay">
+      <p class="section-label">A feast for the eyes</p>
+      <h1>Our Gallery</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="gallery-tabs" id="galleryTabs">
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="cakes">Cakes</button>
+        <button class="tab-btn" data-filter="pastries">Pastries</button>
+        <button class="tab-btn" data-filter="bread">Bread</button>
+        <button class="tab-btn" data-filter="cafe">Café</button>
+      </div>
+
+      <div class="masonry-grid" id="galleryGrid">
+        <div class="masonry-item" data-cat="pastries"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop" alt="Croissants"><div class="masonry-overlay"><p>Butter Croissants</p></div></div>
+        <div class="masonry-item tall" data-cat="cafe"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop" alt="Coffee"><div class="masonry-overlay"><p>Morning Coffee</p></div></div>
+        <div class="masonry-item" data-cat="cakes"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop" alt="Celebration cake"><div class="masonry-overlay"><p>Celebration Cake</p></div></div>
+        <div class="masonry-item" data-cat="pastries"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&auto=format&fit=crop" alt="Pastry display"><div class="masonry-overlay"><p>Pastry Display</p></div></div>
+        <div class="masonry-item" data-cat="cafe"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop" alt="Coffee art"><div class="masonry-overlay"><p>Latte Art</p></div></div>
+        <div class="masonry-item tall" data-cat="cakes"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop" alt="Chocolate cake"><div class="masonry-overlay"><p>Chocolate Fondant</p></div></div>
+        <div class="masonry-item" data-cat="pastries"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&auto=format&fit=crop" alt="Mille feuille"><div class="masonry-overlay"><p>Mille-feuille</p></div></div>
+        <div class="masonry-item" data-cat="bread"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&auto=format&fit=crop" alt="Artisan bread"><div class="masonry-overlay"><p>Artisan Sourdough</p></div></div>
+        <div class="masonry-item" data-cat="cakes"><img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&auto=format&fit=crop" alt="Cheesecake"><div class="masonry-overlay"><p>Passion Fruit Cheesecake</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-arrow left" id="lightboxLeft">&#8249;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-arrow right" id="lightboxRight">&#8250;</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand"><p class="footer-name">Pâtisserie Royale</p><p class="footer-sub">Bakery & Café · Kimihurura, Kigali</p></div>
+      <div><p class="footer-col-title">Pages</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="products.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer-col-title">Contact</p><ul class="footer-links"><li>KG 7 Ave, Kimihurura, Kigali</li><li>+250 780 000 000</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Pâtisserie Royale · All rights reserved</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    // Gallery filter
+    document.querySelectorAll('#galleryTabs .tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#galleryTabs .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.masonry-item').forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.cat === filter) ? 'block' : 'none';
+        });
+      });
+    });
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const images = [...document.querySelectorAll('.masonry-item img')];
+    let current = 0;
+    images.forEach((img, i) => {
+      img.parentElement.addEventListener('click', () => { current = i; lightboxImg.src = img.src; lightbox.classList.add('active'); });
+    });
+    document.getElementById('lightboxClose').onclick = () => lightbox.classList.remove('active');
+    document.getElementById('lightboxLeft').onclick = () => { current = (current - 1 + images.length) % images.length; lightboxImg.src = images[current].src; };
+    document.getElementById('lightboxRight').onclick = () => { current = (current + 1) % images.length; lightboxImg.src = images[current].src; };
+  </script>
+</body>
+</html>

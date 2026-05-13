@@ -1,0 +1,109 @@
+/* ============================================
+   PÂTISSERIE ROYALE — responsive.css
+   Mobile & tablet breakpoints
+   ============================================ */
+
+/* ─── TABLET (max 900px) ─── */
+@media (max-width: 900px) {
+  .section { padding: 52px 28px; }
+  .navbar { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero .slide { height: 460px; }
+  .slide-content { padding: 52px 36px; }
+
+  .about-teaser { grid-template-columns: 1fr; }
+  .about-teaser-img { min-height: 280px; max-height: 320px; }
+  .about-teaser-content { padding: 48px 36px; }
+
+  .two-col { grid-template-columns: 1fr; gap: 36px; }
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  .stat-big { border-right: 1px solid rgba(44,26,14,0.15); border-bottom: 1px solid rgba(44,26,14,0.15); }
+  .stat-big:nth-child(2) { border-right: none; }
+  .stat-big:nth-child(3), .stat-big:nth-child(4) { border-bottom: none; }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; height: auto; }
+  .gallery-item.tall { grid-row: span 1; height: 200px; }
+  .gallery-item { height: 180px; }
+
+  .masonry-grid { columns: 2; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ─── MOBILE (max 600px) ─── */
+@media (max-width: 600px) {
+  .section { padding: 44px 20px; }
+  .navbar { padding: 0 16px; height: 60px; }
+  .brand-name { font-size: 16px; }
+  .brand-sub { display: none; }
+  .nav-cta { display: none; }
+
+  .hero .slide { height: 380px; }
+  .slide-content { padding: 36px 24px; max-width: 100%; }
+  .slide-content h1 { font-size: 28px; }
+  .slide-content p { font-size: 14px; }
+  .slide-btns { gap: 10px; }
+  .btn-primary, .btn-outline { padding: 11px 22px; font-size: 13px; }
+
+  .info-strip { padding: 12px 16px; gap: 12px; }
+  .strip-sep { display: none; }
+
+  .page-hero { height: 220px; }
+  .page-hero-overlay h1 { font-size: 28px; }
+
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .product-img { height: 140px; }
+  .product-name { font-size: 15px; }
+
+  .section-title { font-size: 26px; }
+  .about-stats { gap: 20px; flex-wrap: wrap; }
+
+  .stats-strip { grid-template-columns: 1fr 1fr; }
+
+  .gallery-grid { grid-template-columns: 1fr; height: auto; }
+  .gallery-item { height: 200px; }
+
+  .masonry-grid { columns: 1; }
+
+  .team-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .nl-form { flex-direction: column; align-items: center; }
+  .nl-form input { min-width: 100%; max-width: 400px; }
+
+  .footer { padding: 40px 20px 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .cart-sidebar { width: 100%; right: -100%; }
+
+  .about-teaser-content { padding: 36px 20px; }
+}
+
+/* ─── MOBILE NAV OVERLAY ─── */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  background: var(--choc-dark);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 28px;
+  gap: 18px;
+  z-index: 250;
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }

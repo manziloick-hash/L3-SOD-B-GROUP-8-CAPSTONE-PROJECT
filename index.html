@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pâtisserie Royale — Kimihurura, Kigali</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <img src="assets/images/logo/logo.png" alt="Pâtisserie Royale" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <span class="brand-name">Pâtisserie Royale</span>
+        <span class="brand-sub">Kimihurura · Kigali</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="contact.html" class="nav-cta">Reserve a table</a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SLIDER -->
+  <section class="hero" id="hero">
+    <div class="slider" id="heroSlider">
+      <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop" alt="Coffee and pastry">
+        <div class="slide-content fade-up">
+          <span class="slide-tag">Kimihurura, Kigali</span>
+          <h1>Where <em>French craft</em><br>meets East African warmth</h1>
+          <p>Hand-laminated pastries, single-origin espresso, and cakes baked fresh every morning.</p>
+          <div class="slide-btns">
+            <a href="products.html" class="btn-primary">Explore Menu</a>
+            <a href="about.html" class="btn-outline">Our Story</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&auto=format&fit=crop" alt="Croissants">
+        <div class="slide-content fade-up">
+          <span class="slide-tag">Baked Fresh Daily</span>
+          <h1>Handcrafted with <em>love</em><br>every single morning</h1>
+          <p>72-hour laminated croissants, seasonal tarts, and celebration cakes made in-house.</p>
+          <div class="slide-btns">
+            <a href="products.html" class="btn-primary">View Pastries</a>
+            <a href="gallery.html" class="btn-outline">See Gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=1200&auto=format&fit=crop" alt="Pastry display">
+        <div class="slide-content fade-up">
+          <span class="slide-tag">Custom Celebration Cakes</span>
+          <h1>Your special moments<br>deserve <em>perfection</em></h1>
+          <p>Birthdays, weddings, and corporate events — designed and baked to order.</p>
+          <div class="slide-btns">
+            <a href="contact.html" class="btn-primary">Order a Cake</a>
+            <a href="products.html" class="btn-outline">View Cakes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="slider-arrow left" id="sliderLeft">&#8249;</button>
+    <button class="slider-arrow right" id="sliderRight">&#8250;</button>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Open 7 AM – 9 PM</div>
+    <span class="strip-sep"></span>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Fresh daily</div>
+    <span class="strip-sep"></span>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>KG 7 Ave, Kimihurura</div>
+    <span class="strip-sep"></span>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 12 19.79 19.79 0 012 2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006 6z"/></svg>+250 780 000 000</div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section featured">
+    <div class="container">
+      <p class="section-label">Our Specialties</p>
+      <h2 class="section-title">Fresh from our kitchen</h2>
+      <p class="section-sub">Every piece handcrafted in-house using the finest local and imported ingredients.</p>
+      <div class="products-grid" id="featuredGrid">
+        <!-- Injected by main.js -->
+      </div>
+      <div class="section-cta">
+        <a href="products.html" class="btn-primary">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT TEASER -->
+  <section class="about-teaser">
+    <div class="about-teaser-img">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop" alt="Baker at work">
+    </div>
+    <div class="about-teaser-content">
+      <p class="section-label">Our Story</p>
+      <h2>Born in Kimihurura,<br>inspired by two continents</h2>
+      <div class="divider"></div>
+      <p>Founded by pastry artisans trained in France, Pâtisserie Royale brings the discipline of French pâtisserie together with the warmth and hospitality of Rwanda.</p>
+      <p>Everything is made by hand, every morning. No shortcuts. No compromises.</p>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Years in Kigali</span></div>
+        <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Items daily</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Handmade</span></div>
+      </div>
+      <a href="about.html" class="btn-primary">Read Our Story</a>
+    </div>
+  </section>
+
+  <!-- GALLERY PREVIEW -->
+  <section class="section gallery-preview">
+    <div class="container">
+      <p class="section-label">Gallery</p>
+      <h2 class="section-title">A feast for the eyes</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop" alt="Coffee" class="gallery-item tall">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&auto=format&fit=crop" alt="Croissants" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&auto=format&fit=crop" alt="Cake" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&auto=format&fit=crop" alt="Coffee art" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400&auto=format&fit=crop" alt="Pastry display" class="gallery-item">
+      </div>
+      <div class="section-cta">
+        <a href="gallery.html" class="btn-primary">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Stay in the loop</h2>
+    <p>New seasonal menus, weekend specials, and event invitations — straight to your inbox.</p>
+    <form class="nl-form" id="nlForm">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-name">Pâtisserie Royale</p>
+        <p class="footer-sub">Bakery & Café · Kimihurura, Kigali</p>
+        <p class="footer-tagline">Hand-laminated pastries, single-origin coffee, and celebration cakes in the heart of Kigali.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li>KG 7 Avenue, Kimihurura</li>
+          <li>Kigali, Rwanda</li>
+          <li>+250 780 000 000</li>
+          <li>hello@patisserieroyale.rw</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Pâtisserie Royale, Kimihurura · All rights reserved</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
