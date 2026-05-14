@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Page</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f2f2f2;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .payment-box{
+      background:white;
+      width:380px;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .payment-box h2{
+      text-align:center;
+      margin-bottom:20px;
+      color:#333;
+    }
+
+    .payment-methods{
+      display:flex;
+      gap:10px;
+      margin-bottom:20px;
+    }
+
+    .method{
+      flex:1;
+      text-align:center;
+      padding:10px;
+      border:2px solid #ccc;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .method:hover{
+      border-color:#ffcc00;
+    }
+
+    .method.active{
+      border-color:#ffcc00;
+      background:#fff8d6;
+    }
+
+    .input-box{
+      margin-bottom:15px;
+    }
+
+    .input-box label{
+      display:block;
+      margin-bottom:5px;
+      color:#555;
+      font-size:14px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      outline:none;
+    }
+
+    .row{
+      display:flex;
+      gap:10px;
+    }
+
+    .pay-btn{
+      width:100%;
+      padding:12px;
+      background:#ffcc00;
+      color:black;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .pay-btn:hover{
+      background:#e6b800;
+    }
+
+    .momo-box{
+      background:#fff8d6;
+      padding:12px;
+      border-radius:10px;
+      margin-bottom:15px;
+      text-align:center;
+      font-size:14px;
+      color:#444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-box">
+
+    <h2>Payment Page</h2>
+
+    <div class="payment-methods">
+      <div class="method active">💳 Card</div>
+      <div class="method">📱 MoMo Pay</div>
+    </div>
+
+    <div class="momo-box">
+      Pay easily using MTN MoMo or card payment.
+    </div>
+
+    <form>
+
+      <div class="input-box">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+      </div>
+
+      <div class="input-box">
+        <label>Phone Number (MoMo)</label>
+        <input type="text" placeholder="+250 7XX XXX XXX">
+      </div>
+
+      <div class="input-box">
+        <label>Card Number</label>
+        <input type="text" placeholder="1234 5678 9012 3456">
+      </div>
+
+      <div class="row">
+        <div class="input-box">
+          <label>Expiry</label>
+          <input type="text" placeholder="MM/YY">
+        </div>
+
+        <div class="input-box">
+          <label>CVV</label>
+          <input type="password" placeholder="123">
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label>Amount</label>
+        <input type="text" placeholder="RWF 10,000">
+      </div>
+
+      <button class="pay-btn">Pay Now</button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
