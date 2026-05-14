@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
   <title>Payment Page</title>
-
+  
+  
   <style>
+    
     *{
       margin:0;
       padding:0;
@@ -14,50 +18,55 @@
     }
 
     body{
-      background:#f2f2f2;
+      background:#ff8800;
       display:flex;
       justify-content:center;
       align-items:center;
-      min-height:100vh;
+      height:100vh;
     }
 
     .payment-box{
-      background:white;
+      background:rgb(6, 0, 0);
       width:380px;
       padding:25px;
       border-radius:15px;
       box-shadow:0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .payment-box h2{
+    h2{
       text-align:center;
       margin-bottom:20px;
       color:#333;
     }
 
-    .payment-methods{
+    .tabs{
       display:flex;
-      gap:10px;
       margin-bottom:20px;
+      border-radius:10px;
+      overflow:hidden;
     }
 
-    .method{
+    .tabs button{
       flex:1;
-      text-align:center;
-      padding:10px;
-      border:2px solid #ccc;
-      border-radius:10px;
+      padding:12px;
+      border:none;
       cursor:pointer;
+      background:#ddd;
+      font-weight:bold;
       transition:0.3s;
     }
 
-    .method:hover{
-      border-color:#ffcc00;
+    .tabs button.active{
+      background:#f88502;
+      color:rgb(255, 255, 255);
     }
 
-    .method.active{
-      border-color:#ffcc00;
-      background:#fff8d6;
+    .payment-form{
+      display:none;
+    }
+
+    .payment-form.active{
+      display:block;
     }
 
     .input-box{
@@ -87,85 +96,134 @@
     .pay-btn{
       width:100%;
       padding:12px;
-      background:#ffcc00;
-      color:black;
+      background:#f88502;
+      color:white;
       border:none;
       border-radius:8px;
       font-size:16px;
       cursor:pointer;
-      font-weight:bold;
       transition:0.3s;
     }
 
     .pay-btn:hover{
-      background:#e6b800;
+      background:#f38d00;
     }
 
-    .momo-box{
-      background:#fff8d6;
-      padding:12px;
-      border-radius:10px;
+    .momo-code{
+      background:#f9f9f9;
+      padding:10px;
+      border-radius:8px;
       margin-bottom:15px;
       text-align:center;
-      font-size:14px;
-      color:#444;
+      font-weight:bold;
+      color:#ff9800;
     }
   </style>
+  
 </head>
+<button onclick="window.location.href='index.html';" style="position: absolute; top: 20px; left: 20px; padding: 10px 15px; background-color: #000000; color: white; border: none; border-radius: 5px; cursor: pointer;">🔙Back to Home</button>
 <body>
 
   <div class="payment-box">
+    <h2>Payment Method</h2>
 
-    <h2>Payment Page</h2>
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showForm('card')">
+        Card
+      </button>
 
-    <div class="payment-methods">
-      <div class="method active">💳 Card</div>
-      <div class="method">📱 MoMo Pay</div>
+      <button class="tab-btn" onclick="showForm('momo')">
+        MoMo Pay
+      </button>
     </div>
 
-    <div class="momo-box">
-      Pay easily using MTN MoMo or card payment.
-    </div>
-
-    <form>
-
-      <div class="input-box">
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your name">
-      </div>
-
-      <div class="input-box">
-        <label>Phone Number (MoMo)</label>
-        <input type="text" placeholder="+250 7XX XXX XXX">
-      </div>
-
-      <div class="input-box">
-        <label>Card Number</label>
-        <input type="text" placeholder="1234 5678 9012 3456">
-      </div>
-
-      <div class="row">
+    <!-- Card Payment -->
+    <div id="card" class="payment-form active">
+      <form>
         <div class="input-box">
-          <label>Expiry</label>
-          <input type="text" placeholder="MM/YY">
+          <label>Card Holder Name</label>
+          <input type="text" placeholder="Enter your name">
         </div>
 
         <div class="input-box">
-          <label>CVV</label>
-          <input type="password" placeholder="123">
+          <label>Card Number</label>
+          <input type="text" placeholder="1234 5678 9012 3456">
         </div>
+
+        <div class="row">
+          <div class="input-box">
+            <label>Expiry Date</label>
+            <input type="text" placeholder="MM/YY">
+          </div>
+
+          <div class="input-box">
+            <label>CVV</label>
+            <input type="password" placeholder="123">
+          </div>
+        </div>
+
+        <div class="input-box">
+          <label>Amount</label>
+          <input type="text" placeholder="$100">
+        </div>
+
+        <button class="pay-btn">Pay with Card</button>
+      </form>
+    </div>
+
+    <!-- MoMo Payment -->
+    <div id="momo" class="payment-form">
+
+      <div class="momo-code">
+        MoMo Code: *182*8*1233332#
       </div>
 
-      <div class="input-box">
-        <label>Amount</label>
-        <input type="text" placeholder="RWF 10,000">
-      </div>
+      <form>
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input type="text" placeholder="07XXXXXXXX">
+        </div>
 
-      <button class="pay-btn">Pay Now</button>
+        <div class="input-box">
+          <label>MoMo Pay Code</label>
+          <input type="text" placeholder="Enter merchant code">
+        </div>
 
-    </form>
+        <div class="input-box">
+          <label>Amount</label>
+          <input type="text" placeholder="RWF 5000">
+        </div>
 
+        <button class="pay-btn">Pay with MoMo</button>
+      </form>
+
+    </div>
   </div>
+
+  <script>
+    function showForm(formId){
+
+      // Hide all forms
+      document.querySelectorAll('.payment-form')
+      .forEach(form => {
+        form.classList.remove('active');
+      });
+
+      // Remove active from buttons
+      document.querySelectorAll('.tab-btn')
+      .forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Show selected form
+      document.getElementById(formId)
+      .classList.add('active');
+
+      // Activate clicked button
+      event.target.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
